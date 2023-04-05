@@ -47,7 +47,7 @@ int main(int argc, char** argv)
    ros::Subscriber radar_data;
    radar_data = nh.subscribe("laser_the_best_way_to_shoot", 5, LadarCallback);
 
-   RealWhereToshoot = nh.advertise<std_msgs::Float64MultiArray>("the_shoot_position", 5);
+   RealWhereToshoot = nh.advertise<std_msgs::Float64MultiArray>("/map/shootPosition", 5);
 //Create a tf listener
    tf::TransformListener listener;
  
